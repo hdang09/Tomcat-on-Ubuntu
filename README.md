@@ -7,7 +7,9 @@ Step 0: Update APT
 
 	First, as always, update your APT.
 	$ sudo apt update
+ 
 Step 1: Install java
+
 	- Install the JRE from OpenJDK 11
  	$ sudo apt install default-jre
   	- Install the JDK
