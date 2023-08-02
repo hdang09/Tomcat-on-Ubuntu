@@ -91,6 +91,6 @@ Fix error:  413 Request Entity Too Large on Nginx
 
 Fix error: Remove web app at ROOT path
 
-	$ rm -r /var/lib/tomcat9/webapps/ROOT
- 	$ rm /var/lib/tomcat9/webapps/ROOT.war
+	$ sudo rm -r /var/lib/tomcat9/webapps/ROOT
+ 	$ sudo rm /var/lib/tomcat9/webapps/ROOT.war
 
