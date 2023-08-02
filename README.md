@@ -8,6 +8,10 @@ Step 0: Update APT
 	First, as always, update your APT.
 	$ sudo apt update
 Step 1: Install java
+	- Install the JRE from OpenJDK 11
+ 	$ sudo apt install default-jre
+  	- Install the JDK
+   	$ sudo apt install default-jdk
 
 Step 2: Install Tomcat
 
@@ -42,9 +46,7 @@ Step 3 - Install proxy
 	server {
 		listen 80;
 		listen [::]:80;
-		server_name  47.254.123.50, abc.com;![tomcat](https://user-images.githubusercontent.com/61933071/116106648-82a80f00-a6dc-11eb-8647-f329586dd216.png)![tomcat](https://user-images.githubusercontent.com/61933071/116106672-89368680-a6dc-11eb-9424-93548d608c86.png)
-
-
+		server_name  47.254.123.50, abc.com;
     
 		proxy_redirect           off;
 		proxy_set_header         X-Real-IP $remote_addr;
@@ -84,4 +86,8 @@ Fix error:  413 Request Entity Too Large on Nginx
 
 
 	$ sudo nginx -s reload
+
+Fix error: Deploy web app at ROOT path
+	$ cd /var/lib/tomcat9/webapps
+ 	$ sudo cp -r <YOUR_WEBAPP_PATH> ROOT
 
